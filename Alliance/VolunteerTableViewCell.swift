@@ -4,7 +4,7 @@
 import Foundation
 import UIKit
 
-class MovieTableViewCell: UITableViewCell {
+class VolunteerTableViewCell: UITableViewCell {
     
     // We want to display the movie's poster image
     let poster = UIImageView()
