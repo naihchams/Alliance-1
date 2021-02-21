@@ -42,7 +42,7 @@ class VolunteerTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 100
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -58,7 +58,7 @@ class VolunteerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: VolunteerTableViewCell.cellId, for: indexPath) as! VolunteerTableViewCell
 
         // Configure the cell...
-        _ = indexPath.row
+        //_ = indexPath.row
         
         
         cell.setupViews()
@@ -84,7 +84,7 @@ class VolunteerTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
-    */
+     */
 
     /*
     // Override to support rearranging the table view.
