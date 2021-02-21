@@ -21,6 +21,7 @@
 		FFC2313D25E2ABD3007C44FF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2313C25E2ABD3007C44FF /* HomeViewController.swift */; };
 		FFC2314225E2AC19007C44FF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2314125E2AC19007C44FF /* TabBarController.swift */; };
 		FFC2314725E2AC67007C44FF /* VolunteerParser.swft.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2314625E2AC67007C44FF /* VolunteerParser.swft.swift */; };
+		FFC2314F25E2DD7F007C44FF /* InputVal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2314E25E2DD7F007C44FF /* InputVal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FFC2313C25E2ABD3007C44FF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFC2314125E2AC19007C44FF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FFC2314625E2AC67007C44FF /* VolunteerParser.swft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerParser.swft.swift; sourceTree = "<group>"; };
+		FFC2314E25E2DD7F007C44FF /* InputVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				FFC2314125E2AC19007C44FF /* TabBarController.swift */,
 				F26E439B25E2A79F0079B031 /* Main.storyboard */,
 				F25CF92D25E2CE7B00B4FA3B /* SignupViewController.swift */,
+				FFC2314E25E2DD7F007C44FF /* InputVal.swift */,
 				F25CF92825E2CE6600B4FA3B /* LoginViewController.swift */,
 				FFC2314625E2AC67007C44FF /* VolunteerParser.swft.swift */,
 				F26E439E25E2A7A10079B031 /* Assets.xcassets */,
@@ -278,6 +281,7 @@
 			files = (
 				F25CF92E25E2CE7B00B4FA3B /* SignupViewController.swift in Sources */,
 				FFC2314725E2AC67007C44FF /* VolunteerParser.swft.swift in Sources */,
+				FFC2314F25E2DD7F007C44FF /* InputVal.swift in Sources */,
 				FFC2313D25E2ABD3007C44FF /* HomeViewController.swift in Sources */,
 				F26E439A25E2A79F0079B031 /* TableViewController.swift in Sources */,
 				F26E439625E2A79F0079B031 /* AppDelegate.swift in Sources */,
