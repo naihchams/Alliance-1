@@ -37,7 +37,11 @@ class InputValViewController: UIViewController {
          
          Very useful anchor: self.view.safeAreaLayoutGuide (defines where view is actually seen)
         */
-        orgForm.backgroundColor = .red
+        
+        
+        orgForm.backgroundColor = .systemTeal
+        orgForm.layer.borderColor = UIColor.blue.cgColor
+        orgForm.layer.borderWidth = 1.0
         orgForm.borderStyle = .roundedRect
         orgForm.placeholder = "Organization Name here"
         orgForm.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +56,9 @@ class InputValViewController: UIViewController {
         orgForm.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
         
         myHours.placeholder = "Number of Hours"
-        myHours.backgroundColor = .yellow
+        myHours.backgroundColor = .systemTeal
+        myHours.layer.borderColor = UIColor.blue.cgColor
+        myHours.layer.borderWidth = 1.0
         myHours.translatesAutoresizingMaskIntoConstraints = false
         //myHours.numberOfLines = 3
         //myHours.textAlignment = .center
@@ -65,7 +71,9 @@ class InputValViewController: UIViewController {
         
         myHours.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
         
-        myDescriptions.backgroundColor = .blue
+        myDescriptions.backgroundColor = .systemTeal
+        myDescriptions.layer.borderColor = UIColor.blue.cgColor
+        myDescriptions.layer.borderWidth = 1.0
         myDescriptions.borderStyle = .roundedRect
         myDescriptions.placeholder = "Description"
         myDescriptions.translatesAutoresizingMaskIntoConstraints = false
@@ -79,7 +87,9 @@ class InputValViewController: UIViewController {
         myDescriptions.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
         
         theDate.placeholder = "Date of Service"
-        theDate.backgroundColor = .green
+        theDate.backgroundColor = .systemTeal
+        theDate.layer.borderColor = UIColor.blue.cgColor
+        theDate.layer.borderWidth = 1.0
         theDate.translatesAutoresizingMaskIntoConstraints = false
         //myHours.numberOfLines = 3
         //theDate.textAlignment = .center
@@ -96,7 +106,9 @@ class InputValViewController: UIViewController {
         
         myButton.setTitle("Submit", for: .normal)
         myButton.setTitle("Submitted!", for: .highlighted)
-        myButton.backgroundColor = .purple
+        myButton.backgroundColor = .systemTeal
+        myButton.layer.borderColor = UIColor.blue.cgColor
+        myButton.layer.borderWidth = 1.0
         myButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             myButton.topAnchor.constraint(equalTo: theDate.bottomAnchor),
