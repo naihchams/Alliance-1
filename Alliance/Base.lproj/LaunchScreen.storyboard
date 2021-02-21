@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nai shared a drawing with you" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-yg-MVN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1088" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-yg-MVN">
                                 <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="j5c-z2-m1I"/>
@@ -28,7 +28,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Ts-yg-MVN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Dhm-OC-CjV"/>
+                            <constraint firstItem="6Ts-yg-MVN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HTa-Ob-mB7"/>
                             <constraint firstItem="6Ts-yg-MVN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wsz-s0-Qxe"/>
+                            <constraint firstItem="6Ts-yg-MVN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zfk-9J-et8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,7 +40,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="nai shared a drawing with you" width="682.5" height="682.5"/>
+        <image name="IMG_1088" width="682.5" height="682.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

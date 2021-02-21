@@ -14,20 +14,11 @@ class TabBarController: UITabBarController {
         
        // setUpViews()
     }
-<<<<<<< HEAD
 
   /*  func setUpViews() {
         viewControllers = [createTabBarItem(title: "Movies", imageName: "rectangle.stack", viewController: MovieTableViewController()), createTabBarItem(title: "Me", imageName: "person", viewController: HomeViewController())]
     } */
 
-=======
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> bff87f583eb1c45aac66dcb657cbb1f3776a7d40
-=======
-
->>>>>>> f7f14f48e0670864b4330b2ee78824baea3bf5cc
    /* func setUpViews() {
         viewControllers = [createTabBarItem(title: "Movies", imageName: "rectangle.stack", viewController: MovieTableViewController()), createTabBarItem(title: "Me", imageName: "person", viewController: HomeViewController())]
     }
