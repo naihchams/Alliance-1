@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		F26E439625E2A79F0079B031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E439525E2A79F0079B031 /* AppDelegate.swift */; };
 		F26E439825E2A79F0079B031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E439725E2A79F0079B031 /* SceneDelegate.swift */; };
-		F26E439A25E2A79F0079B031 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E439925E2A79F0079B031 /* ViewController.swift */; };
+		F26E439A25E2A79F0079B031 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E439925E2A79F0079B031 /* TableViewController.swift */; };
 		F26E439D25E2A79F0079B031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26E439B25E2A79F0079B031 /* Main.storyboard */; };
 		F26E439F25E2A7A10079B031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26E439E25E2A7A10079B031 /* Assets.xcassets */; };
 		F26E43A225E2A7A10079B031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26E43A025E2A7A10079B031 /* LaunchScreen.storyboard */; };
 		F26E43AD25E2A7A10079B031 /* AllianceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E43AC25E2A7A10079B031 /* AllianceTests.swift */; };
 		F26E43B825E2A7A10079B031 /* AllianceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E43B725E2A7A10079B031 /* AllianceUITests.swift */; };
+		FFC2313825E2AB9D007C44FF /* VolunteerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2313725E2AB9D007C44FF /* VolunteerTableViewCell.swift */; };
+		FFC2313D25E2ABD3007C44FF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2313C25E2ABD3007C44FF /* HomeViewController.swift */; };
+		FFC2314225E2AC19007C44FF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2314125E2AC19007C44FF /* TabBarController.swift */; };
+		FFC2314725E2AC67007C44FF /* VolunteerParser.swft.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2314625E2AC67007C44FF /* VolunteerParser.swft.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 		F26E439225E2A79F0079B031 /* Alliance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alliance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26E439525E2A79F0079B031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F26E439725E2A79F0079B031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F26E439925E2A79F0079B031 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F26E439925E2A79F0079B031 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F26E439C25E2A79F0079B031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F26E439E25E2A7A10079B031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F26E43A125E2A7A10079B031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		F26E43B325E2A7A10079B031 /* AllianceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllianceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26E43B725E2A7A10079B031 /* AllianceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllianceUITests.swift; sourceTree = "<group>"; };
 		F26E43B925E2A7A10079B031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC2313725E2AB9D007C44FF /* VolunteerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTableViewCell.swift; sourceTree = "<group>"; };
+		FFC2313C25E2ABD3007C44FF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FFC2314125E2AC19007C44FF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FFC2314625E2AC67007C44FF /* VolunteerParser.swft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerParser.swft.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +109,12 @@
 			children = (
 				F26E439525E2A79F0079B031 /* AppDelegate.swift */,
 				F26E439725E2A79F0079B031 /* SceneDelegate.swift */,
-				F26E439925E2A79F0079B031 /* ViewController.swift */,
+				F26E439925E2A79F0079B031 /* TableViewController.swift */,
+				FFC2313725E2AB9D007C44FF /* VolunteerTableViewCell.swift */,
+				FFC2313C25E2ABD3007C44FF /* HomeViewController.swift */,
+				FFC2314125E2AC19007C44FF /* TabBarController.swift */,
 				F26E439B25E2A79F0079B031 /* Main.storyboard */,
+				FFC2314625E2AC67007C44FF /* VolunteerParser.swft.swift */,
 				F26E439E25E2A7A10079B031 /* Assets.xcassets */,
 				F26E43A025E2A7A10079B031 /* LaunchScreen.storyboard */,
 				F26E43A325E2A7A10079B031 /* Info.plist */,
@@ -258,8 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F26E439A25E2A79F0079B031 /* ViewController.swift in Sources */,
+				FFC2314725E2AC67007C44FF /* VolunteerParser.swft.swift in Sources */,
+				FFC2313D25E2ABD3007C44FF /* HomeViewController.swift in Sources */,
+				F26E439A25E2A79F0079B031 /* TableViewController.swift in Sources */,
 				F26E439625E2A79F0079B031 /* AppDelegate.swift in Sources */,
+				FFC2314225E2AC19007C44FF /* TabBarController.swift in Sources */,
+				FFC2313825E2AB9D007C44FF /* VolunteerTableViewCell.swift in Sources */,
 				F26E439825E2A79F0079B031 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
