@@ -37,39 +37,45 @@ class VolunteerTableViewCell: UITableViewCell {
         addSubview(descrip)
       //  addSubview(hours)
         
-        date.placeholder = "Enter date..."
-        orgname.placeholder = "Enter the organization name..."
-        descrip.placeholder = "Enter a description..."
+        date.text = "Date..."
+        orgname.text = "Organization name..."
+        descrip.text = "Description..."
         
         // Let's put the date in the leftmost section of the cell
         date.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             date.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             date.widthAnchor.constraint(equalToConstant: 150),
-            date.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            date.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
             date.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10)
         ])
-        date.backgroundColor = .blue
+        
+        date.layer.borderColor = UIColor.blue.cgColor
+        date.layer.borderWidth = 2.0
         
         // The orgname will go to the right of the poster. Let's make it only take up the top half of the cell.
         orgname.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            orgname.leadingAnchor.constraint(equalTo: orgname.trailingAnchor, constant: 10),
-            orgname.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            orgname.leadingAnchor.constraint(equalTo: date.trailingAnchor, constant: -150),
+            orgname.widthAnchor.constraint(equalToConstant: 385),
             orgname.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             orgname.heightAnchor.constraint(equalToConstant: 30)
         ])
-        orgname.backgroundColor = .red
+        //orgname.backgroundColor = .red
+        orgname.layer.borderColor = UIColor.systemGray2.cgColor
+        orgname.layer.borderWidth = 2.0
         
         // The description should go directly beneath the title.
         descrip.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            descrip.leadingAnchor.constraint(equalTo: orgname.trailingAnchor, constant: 10),
-            descrip.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            descrip.topAnchor.constraint(equalTo: orgname.bottomAnchor, constant: 3),
-            descrip.heightAnchor.constraint(equalToConstant: 100)
+            descrip.leadingAnchor.constraint(equalTo: date.trailingAnchor, constant: 10),
+            descrip.widthAnchor.constraint(equalToConstant: 225),
+            descrip.topAnchor.constraint(equalTo: orgname.bottomAnchor, constant: 10),
+            descrip.heightAnchor.constraint(equalToConstant: 40)
         ])
-        descrip.backgroundColor = .yellow
+        //descrip.backgroundColor = .yellow
+        descrip.layer.borderColor = UIColor.systemTeal.cgColor
+        descrip.layer.borderWidth = 2.0
         
   /*      // The release date is at the bottom left of the cell, to the right of the poster.
         releaseDate.translatesAutoresizingMaskIntoConstraints = false
