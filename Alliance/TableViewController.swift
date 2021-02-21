@@ -15,8 +15,12 @@ class VolunteerTableViewController: UITableViewController {
         // ////////////// //
         
         // Subscribing to a delegate (basically adding itself as a listener)
+/*<<<<<<< HEAD
+       // VolunteerParser.loadDelegate = self
+=======
         //VolunteerParser.loadDelegate = self
-        
+>>>>>>> 94bdf0682b2d4f445a12eb1d9a46f04837e702bd
+        */
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
