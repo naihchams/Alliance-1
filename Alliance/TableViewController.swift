@@ -1,25 +1,22 @@
 import UIKit
 import SwiftUI
 
-class MovieTableViewController: UITableViewController {
+class VolunteerTableViewController: UITableViewController {
 
-    var movieParser = Movies()
-    var movieData: [Movie] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // ** Let's register a UITableViewCell here
         // YOUR CODE HERE //
-        self.tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.cellId)
+        self.tableView.register(VolunteerTableViewCell.self, forCellReuseIdentifier: VolunteerTableViewCell.cellId)
         
         // ////////////// //
         
         // Subscribing to a delegate (basically adding itself as a listener)
-        movieParser.loadDelegate = self
+        VolunteerParser.loadDelegate = self
         
-        fetchData()
-        reloadPage()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,7 +34,7 @@ class MovieTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return movieData.count
+        return 10
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -54,29 +51,10 @@ class MovieTableViewController: UITableViewController {
         // As you scroll down a tableView, the cells that appear or that will appear will be "dequed", which means that they will be processed and returned as a specific instance of a UITableViewCell.
         // It's important to note that not all cells are dequed at once. Only the cells that are about to be scrolled to/displayed on screen are dequed. This helps with performance.
         // Also note the "withIdentifier" parameter here. Each UITableViewCell will have a unique identifier, which we'll get to later in this session.
-        let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.cellId, for: indexPath) as! MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: VolunteerTableViewCell.cellId, for: indexPath) as! VolunteerTableViewCell
 
         // Configure the cell...
         let index = indexPath.row
-        let movie = self.movieData[index]
-        cell.title.text = movie.title
-        cell.overview.text = movie.overview
-        cell.rating.text = movie.rating + "/10"
-        cell.releaseDate.text = movie.releaseDate
-        
-        // load image
-        let imageURL = URL(string: movie.image)!
-        DispatchQueue.global().async {
-            guard let data = try? Data(contentsOf: imageURL) else { return }
-            
-            DispatchQueue.main.async {
-                let img = UIImage(data: data)
-                cell.poster.contentMode = .scaleAspectFit
-                cell.poster.image = img
-            }
-            
-        }
-        
         
         
         cell.setupViews()
@@ -131,37 +109,7 @@ class MovieTableViewController: UITableViewController {
 
 }
 
-// Extension for fetching data
-extension MovieTableViewController {
-    
-    func fetchData() {
-        movieParser.getData()
-        self.movieData = movieParser.getMovies()
-        print(self.movieData.count)
-    }
-    
-    func reloadPage() {
-        self.tableView.reloadData()
-    }
-    
-}
 
-// Explained more in depth on "httpRequests" branch
-extension MovieTableViewController: LoadDelegate {
-    
-    func didFinishLoadData(finished: Bool) {
-        if finished {
-            reloadPage()
-        } else {
-            resendRequest()
-        }
-    }
-    
-    func resendRequest() {
-        fetchData()
-        reloadPage()
-    }
-}
 
 // /////////////////////////////////////// //
 // Remember to setup your content preview! //
@@ -178,7 +126,7 @@ struct TablePreview: PreviewProvider {
     struct ContainerView: UIViewControllerRepresentable {
 
             func makeUIViewController(context: UIViewControllerRepresentableContext<TablePreview.ContainerView>) -> UIViewController {
-                return UINavigationController(rootViewController: MovieTableViewController())
+                return UINavigationController(rootViewController: VolunteerTableViewController())
             }
 
             func updateUIViewController(_ uiViewController: TablePreview.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<TablePreview.ContainerView>) {
