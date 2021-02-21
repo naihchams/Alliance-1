@@ -12,6 +12,8 @@ class VolunteerTableViewCell: UITableViewCell {
     let orgname = UITextField()
     // We want description of the activity to be under org name, typeable textbox
     let descrip = UITextField()
+    
+    let hours = UITextField()
     // get total hours from input and put to right of org name, label
    // let hours = UILabel()
     
@@ -35,11 +37,13 @@ class VolunteerTableViewCell: UITableViewCell {
         addSubview(date)
         addSubview(orgname)
         addSubview(descrip)
+        addSubview(hours)
       //  addSubview(hours)
         
         date.text = "Date..."
         orgname.text = "Organization name..."
         descrip.text = "Description..."
+        hours.text = "X Hrs"
         
         // Let's put the date in the leftmost section of the cell
         date.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +61,7 @@ class VolunteerTableViewCell: UITableViewCell {
         orgname.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             orgname.leadingAnchor.constraint(equalTo: date.trailingAnchor, constant: -150),
-            orgname.widthAnchor.constraint(equalToConstant: 385),
+            orgname.widthAnchor.constraint(equalToConstant: 335),
             orgname.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             orgname.heightAnchor.constraint(equalToConstant: 30)
         ])
@@ -69,7 +73,7 @@ class VolunteerTableViewCell: UITableViewCell {
         descrip.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             descrip.leadingAnchor.constraint(equalTo: date.trailingAnchor, constant: 10),
-            descrip.widthAnchor.constraint(equalToConstant: 225),
+            descrip.widthAnchor.constraint(equalToConstant: 235),
             descrip.topAnchor.constraint(equalTo: orgname.bottomAnchor, constant: 10),
             descrip.heightAnchor.constraint(equalToConstant: 40)
         ])
@@ -77,6 +81,16 @@ class VolunteerTableViewCell: UITableViewCell {
         descrip.layer.borderColor = UIColor.systemTeal.cgColor
         descrip.layer.borderWidth = 2.0
         
+        hours.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            hours.leadingAnchor.constraint(equalTo: orgname.trailingAnchor, constant: 10),
+            hours.widthAnchor.constraint(equalToConstant: 50),
+            hours.topAnchor.constraint(equalTo: descrip.topAnchor, constant: -40),
+            hours.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        //descrip.backgroundColor = .yellow
+        hours.layer.borderColor = UIColor.cyan.cgColor
+        hours.layer.borderWidth = 2.0
   /*      // The release date is at the bottom left of the cell, to the right of the poster.
         releaseDate.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
