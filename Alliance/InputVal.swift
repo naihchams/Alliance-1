@@ -3,24 +3,24 @@ import UIKit
 class InputValViewController: UIViewController {
     
     // Initialize some UI components
-    let myLabel = UILabel()
+    let myHours = UITextField()
     let myButton = UIButton()
-    let myForm = UITextField()
+    let orgForm = UITextField()
+    let myDescriptions = UITextField()
+    let theDate = UITextField()
     let myImage = UIImageView()
     
     override func viewDidLoad() {
         
         // Add subviews to view of UIViewController
-        self.view.addSubview(myForm)
-        self.view.addSubview(myLabel)
+        self.view.addSubview(orgForm)
+        self.view.addSubview(myHours)
+        self.view.addSubview(myDescriptions)
+        self.view.addSubview(theDate)
         self.view.addSubview(myButton)
         self.view.addSubview(myImage)
         
         // We can only apply constraints AFTER we place them in the view.
-        myForm.backgroundColor = .red
-        myForm.borderStyle = .roundedRect
-        myForm.placeholder = "Your text here..."
-        myForm.translatesAutoresizingMaskIntoConstraints = false
         
         /* Anchor rundowns */
         /*
@@ -37,37 +37,72 @@ class InputValViewController: UIViewController {
          
          Very useful anchor: self.view.safeAreaLayoutGuide (defines where view is actually seen)
         */
+        orgForm.backgroundColor = .red
+        orgForm.borderStyle = .roundedRect
+        orgForm.placeholder = "Organization Name here"
+        orgForm.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            myForm.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            myForm.heightAnchor.constraint(equalToConstant: 50),
-            myForm.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 100),
-            myForm.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0)
+            orgForm.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            orgForm.heightAnchor.constraint(equalToConstant: 50),
+            orgForm.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0),
+            orgForm.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0)
         ])
         // Assign a response to an action on the button
-        myForm.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
+        orgForm.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
         
-        myLabel.text = "Hello World!"
-        myLabel.backgroundColor = .green
-        myLabel.translatesAutoresizingMaskIntoConstraints = false
-        myLabel.numberOfLines = 3
-        myLabel.textAlignment = .center
+        myHours.placeholder = "Number of Hours"
+        myHours.backgroundColor = .yellow
+        myHours.translatesAutoresizingMaskIntoConstraints = false
+        //myHours.numberOfLines = 3
+        //myHours.textAlignment = .center
         NSLayoutConstraint.activate([
-            myLabel.topAnchor.constraint(equalTo: myForm.bottomAnchor),
-            myLabel.heightAnchor.constraint(equalToConstant: 200),
-            myLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50),
-            myLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50)
+            myHours.topAnchor.constraint(equalTo: orgForm.bottomAnchor),
+            myHours.heightAnchor.constraint(equalToConstant: 50),
+            myHours.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0),
+            myHours.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0)
         ])
         
-        myButton.setTitle("Press me!", for: .normal)
-        myButton.setTitle("Pressed!", for: .highlighted)
-        myButton.backgroundColor = .blue
+        myHours.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
+        
+        myDescriptions.backgroundColor = .blue
+        myDescriptions.borderStyle = .roundedRect
+        myDescriptions.placeholder = "Description"
+        myDescriptions.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            myDescriptions.topAnchor.constraint(equalTo: myHours.bottomAnchor),
+            myDescriptions.heightAnchor.constraint(equalToConstant: 50),
+            myDescriptions.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0),
+            myDescriptions.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0)
+        ])
+        // Assign a response to an action on the button
+        myDescriptions.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
+        
+        theDate.placeholder = "Date of Service"
+        theDate.backgroundColor = .green
+        theDate.translatesAutoresizingMaskIntoConstraints = false
+        //myHours.numberOfLines = 3
+        //theDate.textAlignment = .center
+        NSLayoutConstraint.activate([
+            theDate.topAnchor.constraint(equalTo: myDescriptions.bottomAnchor),
+            theDate.heightAnchor.constraint(equalToConstant: 50),
+            theDate.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0),
+            theDate.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0)
+        ])
+        
+        theDate.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
+        
+        // MARK: - Bottom View
+        
+        myButton.setTitle("Submit", for: .normal)
+        myButton.setTitle("Submitted!", for: .highlighted)
+        myButton.backgroundColor = .purple
         myButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            myButton.topAnchor.constraint(equalTo: myLabel.bottomAnchor),
+            myButton.topAnchor.constraint(equalTo: theDate.bottomAnchor),
             myButton.heightAnchor.constraint(equalToConstant: 50),
-            myButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50),
-            myButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50)
+            myButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0),
+            myButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0)
         ])
         myButton.addTarget(self, action: #selector(changeText(_:)), for: .allTouchEvents)
         
@@ -98,12 +133,12 @@ class InputValViewController: UIViewController {
         } */
         
         // Part 2: Button changes label text to value of text field
-        myLabel.text = myForm.text
+        myHours.text = orgForm.text
         
     }
     
     @objc func textFieldDidChange(_ sender: UITextField!) {
-        myLabel.text = myForm.text
+        myHours.text = orgForm.text
     }
     
 }
@@ -113,17 +148,17 @@ import SwiftUI
 // This struct from SwiftUI shows us the content preview in the canvas page.
 struct ValPreview: PreviewProvider {
     static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
+        ValContainerView().edgesIgnoringSafeArea(.all)
     }
     
-    struct ContainerView: UIViewControllerRepresentable {
+    struct ValContainerView: UIViewControllerRepresentable {
         
 
-            func makeUIViewController(context: UIViewControllerRepresentableContext<ValPreview.ContainerView>) -> UIViewController {
-                return UINavigationController(rootViewController: HomeViewController())
+            func makeUIViewController(context: UIViewControllerRepresentableContext<ValPreview.ValContainerView>) -> UIViewController {
+                return UINavigationController(rootViewController: InputValViewController())
             }
 
-            func updateUIViewController(_ uiViewController: ValPreview.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<ValPreview.ContainerView>) {
+            func updateUIViewController(_ uiViewController: ValPreview.ValContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<ValPreview.ValContainerView>) {
 
             }
 
