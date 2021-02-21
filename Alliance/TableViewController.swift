@@ -15,7 +15,7 @@ class VolunteerTableViewController: UITableViewController {
         // ////////////// //
         
         // Subscribing to a delegate (basically adding itself as a listener)
-        VolunteerParser.loadDelegate = self
+        //VolunteerParser.loadDelegate = self
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -54,7 +54,7 @@ class VolunteerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: VolunteerTableViewCell.cellId, for: indexPath) as! VolunteerTableViewCell
 
         // Configure the cell...
-        let index = indexPath.row
+        _ = indexPath.row
         
         
         cell.setupViews()

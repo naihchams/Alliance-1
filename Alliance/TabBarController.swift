@@ -12,12 +12,13 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpViews()
+       // setUpViews()
     }
     
-    func setUpViews() {
+   /* func setUpViews() {
         viewControllers = [createTabBarItem(title: "Movies", imageName: "rectangle.stack", viewController: MovieTableViewController()), createTabBarItem(title: "Me", imageName: "person", viewController: HomeViewController())]
     }
+ */
     
     private func createTabBarItem(title: String, imageName: String, viewController: UIViewController) -> UINavigationController {
         
