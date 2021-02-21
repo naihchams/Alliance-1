@@ -55,7 +55,7 @@ class InputValViewController: UIViewController {
         // Assign a response to an action on the button
         orgForm.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
         
-        myHours.placeholder = "Number of Hours"
+        myHours.placeholder = " Number of Hours"
         myHours.backgroundColor = .systemTeal
         myHours.layer.borderColor = UIColor.blue.cgColor
         myHours.layer.borderWidth = 1.0
@@ -86,7 +86,7 @@ class InputValViewController: UIViewController {
         // Assign a response to an action on the button
         myDescriptions.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
         
-        theDate.placeholder = "Date of Service"
+        theDate.placeholder = " Date of Service"
         theDate.backgroundColor = .systemTeal
         theDate.layer.borderColor = UIColor.blue.cgColor
         theDate.layer.borderWidth = 1.0
@@ -135,6 +135,7 @@ class InputValViewController: UIViewController {
         _ is used before a parameter if you don't want to name the parameter in a function call. In this case, changeText() could just be called like that instead of changeText(sender: myButton). Target functions all use (_ sender: ) in their parameter calls. Senders may vary (could be UISlider, UISwitch, etc.)
      
     */
+
     @objc func changeText(_ sender: UIButton!) {
         
         // Part 1: Button changes text on label
@@ -145,15 +146,16 @@ class InputValViewController: UIViewController {
         } */
         
         // Part 2: Button changes label text to value of text field
-        myHours.text = orgForm.text
+        //myHours.text = orgForm.text
         
     }
     
     @objc func textFieldDidChange(_ sender: UITextField!) {
-        myHours.text = orgForm.text
+        //myHours.text = orgForm.text
     }
     
 }
+ 
 
 
 import SwiftUI
